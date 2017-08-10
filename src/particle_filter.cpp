@@ -18,7 +18,7 @@
 #include "particle_filter.h"
 
 #define ket_debug 0
-#define ket_debug2 1
+#define ket_debug2 0
 
 
 using namespace std;
@@ -111,7 +111,7 @@ void ParticleFilter::prediction(double delta_t, double std_pos[], double velocit
 		x= particles[i].x;
 		y= particles[i].y;
 		theta=particles[i].theta;
-
+		//add random
 		particles[i].x = x+dist_x(gen);
 		particles[i].y = y+dist_y(gen);
 		particles[i].theta= theta+dist_psi(gen);
@@ -207,9 +207,9 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
 			} //end of matching landmark with observation.
 				
 			// set association of this particle to land_mark
-			particles[j].associations.push_back(k_);
-			particles[j].sense_x.push_back(obs_mapx);
-			particles[j].sense_y.push_back(obs_mapy);
+			//particles[j].associations.push_back(k_);
+			//particles[j].sense_x.push_back(obs_mapx);
+			//particles[j].sense_y.push_back(obs_mapy);
 
 		
 			//now calculate the probability of observation to the landmark

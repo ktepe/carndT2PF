@@ -5,7 +5,7 @@
 #include "particle_filter.h"
 
 #define ket_debug 0
-#define ket_debug2 1
+#define ket_debug2 0
 
 using namespace std;
 
